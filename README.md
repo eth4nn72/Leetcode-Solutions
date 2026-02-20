@@ -1,3 +1,4 @@
 - Repository for my leetcode problems to look back on to help problem solving in future 
 - Likely to be Mainly Python to start
-- 
+- Each File will include my understanding of the problem and approach
+- Comments in the code explaining sections
