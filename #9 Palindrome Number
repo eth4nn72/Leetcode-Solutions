@@ -1,0 +1,14 @@
+#9 Palindrome Number
+
+# Given an integer check to see if it is the same backwards
+# Can be solved by converting the int into a string then reversing the string
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        
+        # Take an int, if it is the same forward as backward then return true
+
+        num = str(x)
+        rev_num = num[::-1]
+
+        return num == rev_num
