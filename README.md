@@ -1,0 +1,3 @@
+- Repository for my leetcode problems to look back on to help problem solving in future 
+- Likely to be Mainly Python to start
+- 
