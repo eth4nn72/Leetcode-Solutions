@@ -1,0 +1,24 @@
+# Given a list of strings find the longest common prefix 
+
+# Sets the initial prefix to the first word
+# Works backwards decrementing the prefix if a word doesnt match
+# Breaks out the loop once it's been through the entire list and they all match
+
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+
+        prefix = strs[0]
+        count = 0
+        # Takes in a list of strings
+        while prefix != "":
+            for word in strs:
+                if word[0:len(prefix)] != prefix:
+                    prefix = prefix[:-1]
+                else:
+                    count += 1
+                if count == len(strs):
+                    return prefix
+            count = 0
+        return prefix
+            
+        
