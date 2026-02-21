@@ -1,0 +1,43 @@
+#13 Roman To Integer
+
+# Take a string representing roman numerals and convert it to modern number system
+# Not Good code efficiency for this one but it works for all situaions -- maybe a default could be added in the switch case but it passed all tests
+
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        total = 0
+
+        # Loop through the string and replace if any of the rules exist 
+        if "IV" in s:
+            s = str.replace(s, "IV", "IIII")
+        if "IX" in s:
+            s = str.replace(s, "IX", "IIIIIIIII")
+        if "XL" in s:
+            s = str.replace(s, "XL", "XXXX")
+        if "XC" in s:
+            s = str.replace(s, "XC", "XXXXXXXXX")
+        if "CD" in s:
+            s = str.replace(s, "CD", "CCCC")
+        if "CM" in s:
+            s = str.replace(s, "CM", "CCCCCCCCC") 
+
+        # Switch case for each character
+        for char in s:
+            match char:
+                case "I":
+                    total += 1
+                case "V":
+                    total += 5
+                case "X":
+                    total += 10
+                case "L":
+                    total += 50
+                case "C":
+                    total += 100
+                case "D":
+                    total += 500
+                case "M":
+                    total += 1000
+        return total
+            
+        
